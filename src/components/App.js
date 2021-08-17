@@ -1,15 +1,14 @@
-import React from 'react'
-
-import '../assets/css/App.css'
+import React from "react";
+// Import Pages
+import Home from "../pages/Home";
+import "../assets/css/style.css";
 
 function App() {
   return (
     <div>
-      <h1>Hello, Electron!</h1>
-
-      <p>I hope you enjoy using basic-electron-react-boilerplate to start your dev off right!</p>
+      <Home />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

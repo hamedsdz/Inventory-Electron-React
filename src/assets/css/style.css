@@ -1,0 +1,149 @@
+@import url("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Vazir";
+  direction: rtl;
+  background: #fdb96c;
+  color: #0d0d0d;
+}
+.sidebar {
+  position: relative;
+  width: 60px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: ease 0.6s;
+  padding: 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  background: #fdb96c;
+  z-index: 10;
+  overflow: hidden;
+}
+.sidebar.active {
+  width: 170px;
+}
+.sidebar .Sidebar-Head {
+  width: 170px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.sidebar .toggleButton {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+.Sidebar-Body {
+  list-style: none;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.Sidebar-Body li,
+.sidebar #Logout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: baseline;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.Sidebar-Body li:hover,
+.sidebar #Logout:hover {
+  background: rgba(220, 220, 220, 0.5);
+}
+.Sidebar-Body li img,
+.sidebar #Logout img {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+}
+.Sidebar-Body li.active {
+  background: rgba(220, 220, 220, 0.5);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+}
+.main {
+  position: fixed;
+  width: 100%;
+  background: #fdb96c;
+  padding-right: 80px;
+  height: 100vh;
+}
+.main .header {
+  margin-top: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.main .header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+}
+.main .header nav ul {
+  border-top-right-radius: 16px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 760px;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -1px;
+}
+.main .header nav ul li {
+  margin-right: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.main .header nav ul li:hover {
+  font-weight: bolder;
+}
+.main .header nav img {
+  margin-bottom: -1px;
+  height: 40px;
+}
+.main .header .date {
+  line-height: 40px;
+  margin-left: 5px;
+  align-items: flex-end;
+  font-weight: bolder;
+}
+.main .body {
+  position: relative;
+  background: #fff;
+  margin-left: 20px;
+  height: 590px;
+  border-radius: 16px;
+  border-top-right-radius: 0;
+  padding: 20px;
+}
+.main .body h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
